@@ -496,15 +496,6 @@ function xoops_module_uninstall_xnpdata( $xoopsMod ) {
 
  <div xmlns="http://www.w3.org/1999/xhtml" class="navfooter">
 
-
-
  </div>
-
-
  </div>
-
  </body>
-
-
-
-
