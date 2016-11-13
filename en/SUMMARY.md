@@ -1,6 +1,6 @@
 # Table of Content
 
-### Item type module creation procedure manual
+## Item type module creation procedure manual
 
 * [Introduction](book/0introduction.md)
 * [Install\/Uninstall](book/1install.md)
