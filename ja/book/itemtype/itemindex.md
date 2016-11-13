@@ -84,7 +84,8 @@
 
  <div class="mediaobject">
 
- <img src="images\xnpGetIndexDetailBlock.gif" />
+ <img src="../../assets/commonlib/xnpGetIndexDetailBlock.gif" />
+
 
  </div>
 
@@ -628,7 +629,7 @@
 
  <div class="mediaobject">
 
- <img src="images\xnpGetIndexEditBlock.gif" />
+ <img src="../../assets/commonlib/xnpGetIndexEditBlock.gif" />
 
  </div>
 
@@ -738,7 +739,7 @@
 
  <div class="mediaobject">
 
- <img src="images\xnpGetIndexConfirmBlock.gif" />
+ <img src="../../assets/commonlib/xnpGetIndexConfirmBlock.gif" />
 
  </div>
 
