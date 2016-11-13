@@ -1,29 +1,5 @@
- <title>第12章 文字数制限</title>
-
- <link rel="stylesheet" href="style.css" type="text/css" />
-
- <meta name="generator" content="DocBook XSL Stylesheets V1.72.0" />
-
- <link rel="start" href="index.html" title="XooNIps" />
-
- <link rel="up" href="index.html" title="XooNIps" />
-
- <link rel="prev" href="oaipmh.html" title="第11章 OAI-PMH" />
-
- <link rel="next" href="others.html" title="第13章 その他" />
-
- </head>
-
  <body>
 
- <div id="page">
-
- <div xmlns="http://www.w3.org/1999/xhtml" class="navheader">
-
-
- <hr />
-
- </div>
 
  <div xmlns="http://www.w3.org/1999/xhtml" class="chapter" lang="ja" id="lengthlimit" xml:lang="ja">
 
@@ -615,10 +591,8 @@
 
  <table width="100%" summary="Navigation footer">
 
-
-
  </body>
 
-</html>
+
 
 
