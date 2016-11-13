@@ -1,18 +1,46 @@
- <body>
+#Chapter 4: Module Management
 
- <div id="page">
+Item type is implemented in the form of XOOPS modules. Add an item type, update, or delete will use the framework of the XOOPS module management. Here, the installation of the module, updates, describes the item type module performs processing and its implementation at the time of uninstall.
 
- <div xmlns="http://www.w3.org/1999/xhtml" class="navheader">
+###1. Installation process
 
- </div>
+During the installation of the item type, record the following information to the item type table (to insert) you need.
 
- <div xmlns="http://www.w3.org/1999/xhtml" class="chapter" lang="ja" id="module" xml:lang="ja">
+name: module name
 
- <div xmlns="" class="titlepage">
+display_name: Module Display Name
 
- <div>
+mid: module ID
 
- <div>
+viewphp: Section 1. "callback function" PHP file names that have been defined. Specify a relative path from the XOOPS_ROOT_PATH / modules /.
+
+Please implement the processing of the following function to be called back when the module is installed
+
+Table 4.1. The installation process callback function
+
+| | Format| Example (using xnpdata module as example)  
+--- | --- | ---
+folder | modules folder/include/ |xnpdata/include 
+file name  | oninstall.inc.php | oninstall.inc.php
+Name of the function | xoops__module_install_ item type name (lowercase) | xoops_module_install_xnpdata
+
+
+
+
+```php 
+function xoops_module_install_xnpdata ($xoopsMod) {
+global $xoopsDB; 
+
+// Register itemtype 
+$Table = $xoopsDB-> prefix ( 'xoonips_item_type'); 
+$Mid = $xoopsMod-> getVar ( 'mid'); 
+$Sql ​​= "INSERT INTO $ table (name, display_name, mid, viewphp) VALUES ( 'xnpdata', 'Data', $mid, 'xnpdata/include/view.php')"; 
+if ($xoopsDB->query($sql) === FALSE) { // If can not register, itemtype returns false; 
+} 
+....
+
+```
+
 
  <h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="module"></a>第4章 モジュール管理</h2>
 
@@ -306,34 +334,27 @@ function xoops_module_install_xnpdata( $xoopsMod ) {
 
  <pre class="programlisting">
 
+```php
 function xoops_module_update_xnpdata( $xoopsMod, $oldversion ) {
-
  global $xoopsDB;
-
  $table = $xoopsDB-&gt;prefix( 'xnpdata_item_detail' );
 
  echo '&lt;code&gt;Updating modules...&lt;/code&gt;&lt;br /&gt;';
-
  switch ( $oldversion ) {
-
  case 200:
-
  //Ver. 2.00から3.10までの更新処理
 
  ....
 
  case 310:
-
  //Ver. 3.10から3.11までの更新処理
 
  ....
 
  case 311:
-
  //Ver. 3.11から最新版までの更新処理
 
  ....
-
  if ( $is_error ) {
 
  echo $xoopsDB-&gt;error();
@@ -343,13 +364,10 @@ function xoops_module_update_xnpdata( $xoopsMod, $oldversion ) {
  }
 
  default:
-
  return true;
-
  }
-
 }
-
+```
  </pre>
 
  </div>
@@ -442,36 +460,27 @@ function xoops_module_update_xnpdata( $xoopsMod, $oldversion ) {
 
  <td style="" align="left">xoops_module_uninstall_xnpdata</td>
 
- </tr>
 
- </tbody>
 
- </table>
+##3. uninstall process
 
- </div>
+The information written to the item type table at the time of installation, you must remove it during the uninstallation of the item type. In addition, you will need to be removed from the database at the same time as the deletion of even module information of the items that have been created.
 
- </div>
+Please implement the processing of the following function to be called back when the module is uninstalled
 
- <br class="table-break" />
+Table 4.3. Uninstall process callback function
 
- <p>
+FormatExample (in the case of xnpdata module)folderModules folder / include /xnpdata / include /file nameonuninstall.inc.phponuninstall.inc.phpName of the functionxoops_module_uninstall_ item type name (lowercase)xoops_module_uninstall_xnpdata
 
- Dataタイプの場合は以下のように実装します．
+In the case of Data type and implemented as follows.
 
- </p>
-
- <pre class="programlisting">
-
+```php
 function xoops_module_uninstall_xnpdata( $xoopsMod ) {
 
  global $xoopsDB;
-
-
-
- ....
+....
 
  // unregister itemtype
-
  $table = $xoopsDB-&gt;prefix('xoonips_item_type');
 
  $mid = $xoopsMod-&gt;getVar('mid');
@@ -485,17 +494,6 @@ function xoops_module_uninstall_xnpdata( $xoopsMod ) {
  return false;
 
  }
-
  ....
-
- </pre>
-
- </div>
-
- </div>
-
- <div xmlns="http://www.w3.org/1999/xhtml" class="navfooter">
-
- </div>
- </div>
- </body>
+```
+ 
