@@ -1,205 +1,44 @@
- <body>
+# Chapter 2 Overview of items
 
- <div id="page">
+Information of the item is divided into in the following manner:  
+* Basic Information and 
+* Detail Information
 
- <div xmlns="http://www.w3.org/1999/xhtml" class="navheader">
+##1. Basic Information
+Information that all of the items owned regardless of the item type (the field) is called the Basic Information. This has the following items.
 
- </div>
+* title
+* keyword
+* comment
+* DOI
+* Date on the contents of the items [1]
+* Creating a user
+* Created date
+* last updated
+* language
 
- <div xmlns="http://www.w3.org/1999/xhtml" class="chapter" lang="ja" id="item" xml:lang="ja">
+Of these, creating a user, creation date, last update date is determined system. The user can not be specified.
 
- <div xmlns="" class="titlepage">
+Registration and retrieve from the DB to the DB of the Basic Information, parameter check, part of the form creation process is responsible for the system. Item type module author does not need to create these processes. Because it is provided in the form of a function in a common library, you can use to call if necessary.
 
- <div>
 
- <div>
+##2. Detail Information
 
- <h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="item"></a>第2章 アイテムの概要</h2>
+It refers to the item type-specific information that is not included in the Basic Information. Handling of Detail Information are all done the item type module. Recording method and the processing method can be freely determined by the item type.
 
- </div>
+##3. Relatioship between Basic Information and Detail Information
 
- </div>
+Information about one of the items as described above are managed is divided into two of the Basic Information and Detail Information. Item ID exists in order to take the correspondence between the two. Item type module, please management in association with the item ID and Detail Information given from the system. The system will handle the Basic Information and Detail Information with the same item ID as one of items ( Figure 2.1. "Association by item ID (for example)" ).
 
- </div>
-
- <p>アイテムの情報は以下の様に Basic Information と Detail Information に分けられます．</p>
-
- <div class="section" lang="ja" xml:lang="ja">
-
- <div xmlns="" class="titlepage">
-
- <div>
-
- <div>
-
- <h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="item.basicinfo"></a>1. Basic Information</h2>
-
- </div>
-
- </div>
-
- </div>
-
- <p>アイテムタイプに拘らずすべてのアイテムが所有する情報(フィールド)を Basic Information と呼びます．これには以下の項目があります．</p>
-
- <div class="itemizedlist">
-
- <ul type="disc">
-
- <li>
-
- <p>タイトル</p>
-
- </li>
-
- <li>
-
- <p>キーワード</p>
-
- </li>
-
- <li>
-
- <p>コメント</p>
-
- </li>
-
- <li>
-
- <p>DOI</p>
-
- </li>
-
- <li>
-
- <p>アイテムの内容物に関する年月日<sup>[<a id="id360007" href="#ftn.id360007">1</a>]</sup>
-
- </p>
-
- </li>
-
- <li>
-
- <p>作成ユーザ</p>
-
- </li>
-
- <li>
-
- <p>作成日</p>
-
- </li>
-
- <li>
-
- <p>最終更新日</p>
-
- </li>
-
- <li>
-
- <p>言語</p>
-
- </li>
-
- </ul>
-
- </div>
-
- <p>これらのうち，作成ユーザ，作成日，最終更新日はシステムが決定します．ユーザは指定できません．</p>
-
- <p>Basic Information の DB への登録や DB からの取得，パラメータチェック，フォーム作成処理の一部はシステムが担当します．アイテムタイプモジュール作成者はこれらの処理を作成する必要はありません．共通ライブラリに関数の形で提供されるので，必要に応じて呼び出して使用します．</p>
-
- </div>
-
- <div class="section" lang="ja" xml:lang="ja">
-
- <div xmlns="" class="titlepage">
-
- <div>
-
- <div>
-
- <h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="item.detailinfo"></a>2. Detail Information</h2>
-
- </div>
-
- </div>
-
- </div>
-
- <p>Basic Information に含まれないアイテムタイプ固有の情報を指します．Detail Information の取扱いはすべてアイテムタイプモジュールが行ないます．記録方法や処理方法はアイテムタイプで自由に決定できます．</p>
-
- </div>
-
- <div class="section" lang="ja" xml:lang="ja">
-
- <div xmlns="" class="titlepage">
-
- <div>
-
- <div>
-
- <h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="item.basic-detail"></a>3. Basic Information と Detail Information の対応</h2>
-
- </div>
-
- </div>
-
- </div>
-
- <p>前述の様に 1つのアイテムに関する情報が，Basic Information と Detail Information の二つに分かれて管理されます．両者の対応をとるためにアイテム ID が存在します．アイテムタイプモジュールは，システムから与えられるアイテム ID と Detail Information を対応付けて管理してください．システムは同じアイテム ID を持つ Basic Information と Detail Information を 1つのアイテムとして取り扱います(<a href="item.html#fig.item.basic-detail.example" title="図 2.1. アイテム ID による対応付け (例)">図 2.1. 「アイテム ID による対応付け (例)」</a>)．</p>
-
- <div class="figure">
-
- <a id="fig.item.basic-detail.example"></a>
-
- <div class="figure-contents">
-
- <div class="mediaobject">
 
  <img src="../../assets/itemtype/relation.gif" alt="アイテム ID による対応付け (例)" />
 
- </div>
 
- </div>
+ <b> 2.1. Correspondence by item ID (for example) </b>
 
- <p class="title">
-
- <b>図 2.1. アイテム ID による対応付け (例)</b>
-
- </p>
-
- </div>
-
- <br class="figure-break" />
-
- </div>
-
- <div class="footnotes">
-
- <br />
-
- <hr width="100" align="left" />
-
+ 
  <div class="footnote">
 
- <p><sup>[<a id="ftn.id360007" href="#id360007">1</a>] </sup>アイテムが論文なら論文発行日，プログラムならリリース年月日などを指定します．年月日が何を意味するかはアイテムタイプによって変わります．年月日を使わないアイテムタイプもあります．</p>
-
- </div>
-
- </div>
-
- </div>
-
- <div xmlns="http://www.w3.org/1999/xhtml" class="navfooter">
-
-
-
- </div>
-
- </div>
-
- </body>
-
+ <p><sup>[<a id="ftn.id360007" href="#id360007">1</a>] </sup>
+Item paper if paper issue date, to specify such as with the release if the program date. Or date is meant what will vary by item type. There is also an item type that does not use date. 
 
