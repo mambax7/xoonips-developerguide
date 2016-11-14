@@ -16,7 +16,9 @@ Tutorial Version 3.40
 
 ## Tutorial Purpose 
 
-This document describes the creation process of the item type module (hereinafter the System) that is needed for XooNIps. To create XOOPS module, PHP and MySQL know-how is required.
+This document describes the creation process of the item type module (hereinafter the System) that is needed for XooNIps. 
+
+To create XOOPS module, PHP and MySQL know-how is required.
 
 ![image001.png](assets/image001.png)
 *Figure 1: Main view of the XXX Module (Admin side)*
