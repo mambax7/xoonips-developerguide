@@ -2,9 +2,9 @@
 ## Item type module creation procedure manual
 * [About this document](book/itemtype2/intro.md)
 * [Overview of items](book/itemtype2/item.md)
- Basic Information
- Detail Information
- en correspondence of Basic Information and Detail Information
+	Basic Information
+	Detail Information
+	en correspondence of Basic Information and Detail Information
 * [Overview of the item type module](book/itemtype2/itemtype.md)
 	callback function
 	Create a screen
@@ -69,7 +69,7 @@
 * [1. Simple Search](book/itemtype2/quicksearch.md)
 * [2. Advanced Search](book/itemtype2/advancedsearch.md)
 	1. Search form creation
-		1.1. About $ search_var argument
+		1.1. About $search_var argument
 	1. statement create a search query (SQL)
 * [2. Items capacity](book/itemtype2/capacity.md)
 * [The top screen of 18. XooNIps module](book/itemtype2/module_top.md)
