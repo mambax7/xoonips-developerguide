@@ -1,22 +1,25 @@
 ### _XOOPS Documentation Series_
 ![logoXoops.jpg](assets/logoXoops.jpg)
 
-# Module XXX
+# XooNIps Developer Guide
+
 #### for XOOPS 2.5.8
 
-Module Version x.xx
+Module Version 3.40
 
-Tutorial Version x.xx
-      
-![logoModule.png](assets/logoModule.png)
-            
-## User Manual
+Tutorial Version 3.40      
 
-© 2016 XOOPS Project ([www.xoops.org](http://xoops.org)),    [XooNIps](http://xoonips.osdn.jp/), [Riken](http://www.riken.jp/)  
+![logoModule.png](assets/logoModule.png)            
 
-## Module Purpose 
+## Developer Guide
 
-This module is for .....
+© 2016 XOOPS Project ([www.xoops.org](http://xoops.org)),   [XooNIps](http://xoonips.osdn.jp/), [Riken](http://www.riken.jp/)   
+
+## Tutorial Purpose 
+
+This document describes the creation process of the item type module (hereinafter the System) that is needed for XooNIps. 
+
+To create XOOPS module, PHP and MySQL know-how is required.
 
 ![image001.png](assets/image001.png)
 *Figure 1: Main view of the XXX Module (Admin side)*
