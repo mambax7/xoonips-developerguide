@@ -1,10 +1,10 @@
-# Table of Content
+# Table of Content (in - book - commonlib)
 
 ## Item type module creation procedure manual
 
-[* About this document](book/itemtype/intro.md)
+[About this document](book/itemtype/intro.md)
 
-[* Overview of items](book/itemtype/item.md)
+[Overview of items](book/itemtype/item.md)
 
 * Basic Information
 
@@ -12,7 +12,7 @@
 
 * correspondence of Basic Information and Detail Information
 
-[* Overview of the item type module](book/itemtype/itemtype.md)
+[Overview of the item type module](book/itemtype/itemtype.md)
 
 * callback function
 
@@ -20,7 +20,7 @@
 
 * data manipulation
 
-[* The module management](book/itemtype/module.md)
+[The module management](book/itemtype/module.md)
 
 * installation process
 
@@ -28,13 +28,13 @@
 
 * uninstall process
 
-[* ORM object](book/itemtype/orm.md)
+[ORM object](book/itemtype/orm.md)
 
 * implementation of the data class
 
 * implementation of the handler class
 
-[* common library](book/itemtype/commonlib.md)
+[common library](book/itemtype/commonlib.md)
 
 * Basic Information
 

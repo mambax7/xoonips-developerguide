@@ -1,4 +1,4 @@
-# Table of Content
+# Table of Content (en)
 ## Item type module creation procedure manual
 [About this document](book/itemtype/intro.md)
 
