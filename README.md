@@ -21,7 +21,7 @@ This document describes the creation process of the item type module (hereinafte
 To create XOOPS module, PHP and MySQL know-how is required.
 
 ![image001.png](en/assets/image001.png)
-*Figure 1: Main view of the XXX Module (Admin side)*
+*Figure 1: Main view of the XooNIps Architecture*
 
 ## Download/Fork the Module ![](http://xoops.org/images/forkit.png) 
 
