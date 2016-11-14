@@ -12,7 +12,7 @@ Tutorial Version 3.40
             
 ## Developer Guide
 
-© 2016 XOOPS Project ([www.xoops.org](http://xoops.org))  
+© 2016 XOOPS Project ([www.xoops.org](http://xoops.org)),   [XooNIps](http://xoonips.osdn.jp/), [Riken](http://www.riken.jp/)   
 
 ## Tutorial Purpose 
 
