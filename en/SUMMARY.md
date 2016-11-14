@@ -2,123 +2,64 @@
 ## Item type module creation procedure manual
 * [About this document](book/itemtype/intro.md)
 * [Overview of items](book/itemtype/item.md)
-- Basic Information
-- Detail Information
-- en correspondence of Basic Information and Detail Information
+ Basic Information
+ Detail Information
+ en correspondence of Basic Information and Detail Information
 * [Overview of the item type module](book/itemtype/itemtype.md)
- callback function
- Create a screen
- data manipulation
+	callback function
+	Create a screen
+	data manipulation
 * [The module management](book/itemtype/module.md)
-	* installation process
-	* update process
-	* uninstall process
+	 installation process
+	 update process
+	 uninstall process
 * [ORM object](book/itemtype/orm.md)
-* implementation of the data class
-* implementation of the handler class
-[Common Library](book/itemtype/commonlib.md)
-* Basic Information
-* index keyword
-* Detail Information
-3.1. Attachments
-3.2. Download attachments limit
-3.3. Image file
-3.4. Text
-* [1. Item Registration](book/itemtype/register.md)
-1. Registration Form request
-1.1. Registration form creation of Basic Information
-1.2. Registration form creation of Detail Information
-1.3. Parameter check function
-1.4. Reserved parameter names
-1. registration content confirmation form request
-2.1. Callback parameter check function
-2.2. Registration content confirmation form creation of Basic Information
-2.3. Registration content confirmation form creation of Detail Information
-2.4. Reserved parameter names
-1. The item registration request
-3.1. Registration of Basic Information
-3.2. Registration of Detail Information
-* [1. item editing](book/itemtype/edit.md)
-1. edit form request
-1.1. Edit form creation of Basic Information
-
-
-
-1.2. Edit form creation of Detail Information
-
-
-
-1.3. Parameter check function
-
-
-
-1.4. Reserved parameter names
-
-
-
-1. Edit content confirmation form request
-
-
-
-2.1. Callback parameter check function
-
-
-
-2.2. Callback of change field check function
-
-
-
-2.3. Edit content confirmation form creation of Basic Information
-
-
-
-2.4. Edit content confirmation form creation of Detail Information
-
-
-
-2.5. Reserved parameter names
-
-
-
-1. item update request
-
-
-
-3.1. Updating the Basic Information
-
-
-
-3.2. Updating Detail Information
-
-
-
-[1. Item List](book/itemtype/list.md)
-
-
-
-1. generation of items Overview
-
-
-
-[3. Item List Printable](book/itemtype/printlist.md)
-
-
-
-[4. Item Details screen](book/itemtype/detail.md)
-
-
-
-1. generation form of Basic Information
-
-
-
-2. generation form of Detail Information
-
-
-
-
-
-[7. Item Details Printable](book/itemtype/print.md)
+	implementation of the data class
+	implementation of the handler class
+* [Common Library](book/itemtype/commonlib.md)
+	Basic Information
+	index keyword
+	Detail Information
+	3.1. Attachments
+	3.2. Download attachments limit
+	3.3. Image file
+	3.4. Text
+* [Item Registration](book/itemtype/register.md)
+	1. Registration Form request
+	1.1. Registration form creation of Basic Information
+	1.2. Registration form creation of Detail Information
+	1.3. Parameter check function
+	1.4. Reserved parameter names
+	1. registration content confirmation form request
+	2.1. Callback parameter check function
+	2.2. Registration content confirmation form creation of Basic Information
+	2.3. Registration content confirmation form creation of Detail Information
+	2.4. Reserved parameter names
+	1. The item registration request
+	3.1. Registration of Basic Information
+	3.2. Registration of Detail Information
+* [Item Editing](book/itemtype/edit.md)
+	1. edit form request
+	1.1. Edit form creation of Basic Information
+	1.2. Edit form creation of Detail Information
+	1.3. Parameter check function
+	1.4. Reserved parameter names
+	1. Edit content confirmation form request
+	2.1. Callback parameter check function
+	2.2. Callback of change field check function
+	2.3. Edit content confirmation form creation of Basic Information
+	2.4. Edit content confirmation form creation of Detail Information
+	2.5. Reserved parameter names
+	1. item update request
+	3.1. Updating the Basic Information
+	3.2. Updating Detail Information
+* [Item List](book/itemtype/list.md)
+	1. generation of items Overview
+* [Item List Printable](book/itemtype/printlist.md)
+* [4. Item Details screen](book/itemtype/detail.md)
+	1. generation form of Basic Information
+	2. generation form of Detail Information
+* [7. Item Details Printable](book/itemtype/print.md)
 
 
 
