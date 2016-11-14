@@ -10,7 +10,7 @@
 
 * Detail Information
 
-* correspondence of Basic Information and Detail Information
+* en book  commonlib correspondence of Basic Information and Detail Information
 
 [Overview of the item type module](book/itemtype/itemtype.md)
 
