@@ -2,9 +2,9 @@
 
 ## Item type module creation procedure manual
 
-[About this document](book/itemtype/intro.md)
+* [About this document](book/itemtype/intro.md)
 
-[Overview of items](book/itemtype/item.md)
+* [Overview of items](book/itemtype/item.md)
 
 * Basic Information
 

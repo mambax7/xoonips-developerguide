@@ -1,13 +1,13 @@
 # Table of Content (en)
 ## Item type module creation procedure manual
-[About this document](book/itemtype/intro.md)
+* [About this document](book/itemtype/intro.md)
 
-[Overview of items](book/itemtype/item.md)
+* [Overview of items](book/itemtype/item.md)
 * Basic Information
 * Detail Information
 * correspondence of Basic Information and Detail Information
 
-[Overview of the item type module](book/itemtype/itemtype.md)
+* [Overview of the item type module](book/itemtype/itemtype.md)
 * callback function
 * Create a screen
 * data manipulation
