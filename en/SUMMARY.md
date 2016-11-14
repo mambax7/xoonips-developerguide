@@ -3,19 +3,19 @@
 * [About this document](book/itemtype/intro.md)
 
 * [Overview of items](book/itemtype/item.md)
-* Basic Information
-* Detail Information
-* en correspondence of Basic Information and Detail Information
+- Basic Information
+- Detail Information
+- en correspondence of Basic Information and Detail Information
 
 * [Overview of the item type module](book/itemtype/itemtype.md)
-* callback function
-* Create a screen
-* data manipulation
+ callback function
+ Create a screen
+ data manipulation
 
-[The module management](book/itemtype/module.md)
-* installation process
-* update process
-* uninstall process
+* [The module management](book/itemtype/module.md)
+	* installation process
+	* update process
+	* uninstall process
 
 [ORM object](book/itemtype/orm.md)
 * implementation of the data class
