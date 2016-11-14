@@ -1,22 +1,22 @@
 # Table of Content en
 ## Item type module creation procedure manual
-* [About this document](book/itemtype2/intro.md)
-* [Overview of items](book/itemtype2/item.md)
+* [About this document](book/itemtype/intro.md)
+* [Overview of items](book/itemtype/item.md)
 	Basic Information
 	Detail Information
 	en correspondence of Basic Information and Detail Information
-* [Overview of the item type module](book/itemtype2/itemtype.md)
+* [Overview of the item type module](book/itemtype/itemtype.md)
 	callback function
 	Create a screen
 	data manipulation
-* [The module management](book/itemtype2/module.md)
+* [The module management](book/itemtype/module.md)
 	 installation process
 	 update process
 	 uninstall process
-* [ORM object](book/itemtype2/orm.md)
+* [ORM object](book/itemtype/orm.md)
 	implementation of the data class
 	implementation of the handler class
-* [Common Library](book/itemtype2/commonlib.md)
+* [Common Library](book/itemtype/commonlib.md)
 	Basic Information
 	index keyword
 	Detail Information
@@ -24,7 +24,7 @@
 	3.2. Download attachments limit
 	3.3. Image file
 	3.4. Text
-* [Item Registration](book/itemtype2/register.md)
+* [Item Registration](book/itemtype/register.md)
 	1. Registration Form request
 		1.1. Registration form creation of Basic Information
 		1.2. Registration form creation of Detail Information
@@ -38,7 +38,7 @@
 	3. The item registration request
 		3.1. Registration of Basic Information
 		3.2. Registration of Detail Information
-* [Item Editing](book/itemtype2/edit.md)
+* [Item Editing](book/itemtype/edit.md)
 	1. Edit form request
 		1.1. Edit form creation of Basic Information
 		1.2. Edit form creation of Detail Information
@@ -53,30 +53,30 @@
 	3. item update request
 		3.1. Updating the Basic Information
 		3.2. Updating Detail Information
-* [Item List](book/itemtype2/list.md)
+* [Item List](book/itemtype/list.md)
 	1. generation of items Overview
-* [Item List Printable](book/itemtype2/printlist.md)
-* [4. Item Details screen](book/itemtype2/detail.md)
+* [Item List Printable](book/itemtype/printlist.md)
+* [4. Item Details screen](book/itemtype/detail.md)
 	1. generation form of Basic Information
 	2. generation form of Detail Information
-* [7. Item Details Printable](book/itemtype2/print.md)
-* [8. Delete Items](book/itemtype2/delete.md)
+* [7. Item Details Printable](book/itemtype/print.md)
+* [8. Delete Items](book/itemtype/delete.md)
 	1. Delete the Basic Information
 	2. Delete of Detail Information
-* [1. meta-information](book/itemtype2/metainfo.md)
+* [1. meta-information](book/itemtype/metainfo.md)
 	1. BasicInformation meta-information
 	Meta-information of 2. Detail Information
-* [1. Simple Search](book/itemtype2/quicksearch.md)
-* [2. Advanced Search](book/itemtype2/advancedsearch.md)
+* [1. Simple Search](book/itemtype/quicksearch.md)
+* [2. Advanced Search](book/itemtype/advancedsearch.md)
 	1. Search form creation
 		1.1. About $search_var argument
 	1. statement create a search query (SQL)
-* [2. Items capacity](book/itemtype2/capacity.md)
-* [The top screen of 18. XooNIps module](book/itemtype2/module_top.md)
-* [1. Export](book/itemtype2/export.md)
+* [2. Items capacity](book/itemtype/capacity.md)
+* [The top screen of 18. XooNIps module](book/itemtype/module_top.md)
+* [1. Export](book/itemtype/export.md)
 	1. license agreement)
 	2. Export of Detail Information)
-* [4. Import](book/itemtype2/import.md)
+* [4. Import](book/itemtype/import.md)
 	1. Class
 	2. class name
 	3. The file name, file path
@@ -99,12 +99,12 @@
 		5.12. Corresponding to the attachment
 	6. Other function
 		6.1. Error function (setErrors)
-* [1. OAI-PMH](book/itemtype2/oaipmh.md)
+* [1. OAI-PMH](book/itemtype/oaipmh.md)
 	1. OAI-PMH processing
 	1.1. Enumeration of the corresponding meta-data format
 	1.2. Generation of metadata
 	1. Download previous agreement request
-* [2. presence or absence of a license agreement request](book/itemtype2/)
+* [2. presence or absence of a license agreement request](book/itemtype/)
 	1. presence or absence of a download of notification
 	2. agreement request block
 	3. change history
