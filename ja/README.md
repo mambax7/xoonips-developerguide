@@ -12,7 +12,7 @@ Tutorial Version x.xx
             
 ## User Manual
 
-© 2016 XOOPS Project ([www.xoops.org](http://xoops.org))  
+© 2016 XOOPS Project ([www.xoops.org](http://xoops.org)),    [XooNIps](http://xoonips.osdn.jp/), [Riken](http://www.riken.jp/)  
 
 ## Module Purpose 
 
@@ -33,16 +33,9 @@ Editing the book can be done either by updating the markdown files with a text e
 
 # Table of Content
 
-* [Introduction](book/0introduction.md)
-* [Install/Uninstall](book/1install.md)
-* [Administration Menu](book/2administration.md)
-* [Preferences](book/3preferences.md)
-* [Operating Instructions](book/4operations.md)
-* [The User Side](book/5userside.md)
-* [Blocks](book/6blocks.md)
-* [Templates](book/7templates.md)
-* [Miscellaneous](book/8other.md) 
-* [Module Credits](book/9credits.md)
+* [Item Type Module Creation Guide](book/itemtype/intro.md)
+* [Common Library Function List Guide](book/commonlib/intro.md)
+* [Credits](book/9credits.md)
 * [About XOOPS CMS](book/10aboutxoops.md)
 
 ##License:
