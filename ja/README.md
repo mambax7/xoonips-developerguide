@@ -5,7 +5,7 @@
 
 #### for XOOPS 2.5.8
 
-Module Version 3.40
+Module Version 3.45
 
 Tutorial Version 3.40      
 

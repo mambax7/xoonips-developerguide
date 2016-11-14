@@ -1,14 +1,14 @@
 ### _XOOPS Documentation Series_
-![logoXoops.jpg](assets/logoXoops.jpg)
+![logoXoops.jpg](en/assets/logoXoops.jpg)
 
 # XooNIps Developer Guide
 #### for XOOPS 2.5.8
 
-Module Version 3.40
+Module Version 3.45
 
 Tutorial Version 3.40
       
-![logoModule.png](assets/logoModule.png)
+![logoModule.png](en/en/assets/logoModule.png)
             
 ## Developer Guide
 
@@ -20,7 +20,7 @@ This document describes the creation process of the item type module (hereinafte
 
 To create XOOPS module, PHP and MySQL know-how is required.
 
-![image001.png](assets/image001.png)
+![image001.png](en/assets/image001.png)
 *Figure 1: Main view of the XXX Module (Admin side)*
 
 ## Download/Fork the Module ![](http://xoops.org/images/forkit.png) 
