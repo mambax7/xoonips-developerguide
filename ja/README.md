@@ -36,8 +36,8 @@ Editing the book can be done either by updating the markdown files with a text e
 
 # Table of Content
 
-* [Item Type Module Creation Guide](book/itemtype/intro.md)
-* [Common Library Function List Guide](book/commonlib/intro.md)
+* [アイテムタイプモジュール作成手順書](book/itemtype/intro.md)
+* [共通ライブラリ関数一覧](book/commonlib/intro.md)
 * [Credits](book/9credits.md)
 * [About XOOPS CMS](book/10aboutxoops.md)
 
