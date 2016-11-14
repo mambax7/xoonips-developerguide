@@ -35,7 +35,7 @@ Editing the book can be done either by updating the markdown files with a text e
 
 # Table of Content
 
-* [Item Type Module Creation Guide](book/itemtype/intro.md)
+* [Item Type Module Creation Guide](book/itemtype2/intro.md)
 * [Common Library Function List Guide](book/commonlib/intro.md)
 * [Credits](book/9credits.md)
 * [About XOOPS CMS](book/10aboutxoops.md)
