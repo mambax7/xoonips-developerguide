@@ -1,18 +1,3 @@
- <body>
-
- <div id="page">
-
- <div xmlns="http://www.w3.org/1999/xhtml" class="navheader">
-
- </div>
-
- <div xmlns="http://www.w3.org/1999/xhtml" class="chapter" lang="ja" id="module" xml:lang="ja">
-
- <div xmlns="" class="titlepage">
-
- <div>
-
- <div>
 
  <h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="module"></a>第4章 モジュール管理</h2>
 
@@ -22,15 +7,7 @@
 
  </div>
 
- <p>アイテムタイプはXOOPSのモジュールの形で実装されます．アイテム
-
- タイプを追加，更新，削除するにはXOOPSのモジュール管理の枠組を利用し
-
- ます．ここでは，モジュールのインストール，アップデート，アンインス
-
- トール時にアイテムタイプモジュールが行う処理とその実装に付いて説明
-
- します．</p>
+ <p>アイテムタイプはXOOPSのモジュールの形で実装されます．アイテム タイプを追加，更新，削除するにはXOOPSのモジュール管理の枠組を利用し ます．ここでは，モジュールのインストール，アップデート，アンインス トール時にアイテムタイプモジュールが行う処理とその実装に付いて説明 します．</p>
 
  <div class="section" lang="ja" xml:lang="ja">
 
@@ -50,460 +27,185 @@
 
  <p>アイテムタイプのインストール時に，アイテムタイプテーブルに以下の情報を記録する(insertする)必要があります．</p>
 
- <div class="itemizedlist">
+<div class="itemizedlist">
 
- <ul type="disc">
+*   name: モジュール名
 
- <li>
+*   display_name: モジュール表示名
 
- <p>name: モジュール名</p>
+*   mid: モジュールID
 
- </li>
+*   viewphp: [項1\. 「コールバック関数」](itemtype.html#itemtype.callback "1\. コールバック関数")が定義されているPHPファイル名．XOOPS_ROOT_PATH/modules/ からの相対パスで指定します．
 
- <li>
+</div>
 
- <p>display_name: モジュール表示名</p>
+モジュールインストール時にコールバックされる以下の関数に処理を実装してください
 
- </li>
+<div class="table"><a id="table.module.install"></a>
 
- <li>
+**表 4.1\. インストール処理コールバック関数**
 
- <p>mid: モジュールID</p>
+<div class="table-contents">
 
- </li>
+<colgroup><col> <col> <col></colgroup> 
 
- <li>
+| |書式|例(xnpdataモジュールの場合)|
+|--|--|--|
+|フォルダ|モジュールフォルダ/include/|xnpdata/include/|
+|ファイル名 | oninstall.inc.php | oninstall.inc.php |
+|関数名 | xoops_module_install_アイテムタイプ名(小文字) | xoops_module_install_xnpdata |
 
- <p>viewphp: <a href="itemtype.html#itemtype.callback" title="1. コールバック関数">項1. 「コールバック関数」</a>が定義されているPHPファイル名．XOOPS_ROOT_PATH/modules/ からの相対パスで指定します．</p>
+</div>
 
- </li>
-
- </ul>
-
- </div>
-
- <p>モジュールインストール時にコールバックされる以下の関数に処理を実装してください</p>
-
- <div class="table">
-
- <a id="table.module.install"></a>
-
- <p class="title">
-
- <b>表 4.1. インストール処理コールバック関数</b>
-
- </p>
-
- <div class="table-contents">
-
- <table summary="インストール処理コールバック関数" cellspacing="0" cellpadding="5" border="0" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
-
- <colgroup>
-
- <col />
-
- <col />
-
- <col />
-
- </colgroup>
-
- <thead>
-
- <tr>
-
- <th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left"> </th>
-
- <th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">書式</th>
-
- <th style="border-bottom: 0.5pt solid ; " align="left">例(xnpdataモジュールの場合)</th>
-
- </tr>
-
- </thead>
-
- <tbody>
-
- <tr>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">フォルダ</td>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">モジュールフォルダ/include/</td>
-
- <td style="border-bottom: 0.5pt solid ; " align="left">xnpdata/include/</td>
-
- </tr>
-
- <tr>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">ファイル名</td>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">oninstall.inc.php</td>
-
- <td style="border-bottom: 0.5pt solid ; " align="left">oninstall.inc.php</td>
-
- </tr>
-
- <tr>
-
- <td style="border-right: 0.5pt solid ; " align="left">関数名</td>
-
- <td style="border-right: 0.5pt solid ; " align="left">xoops_module_install_アイテムタイプ名(小文字)</td>
-
- <td style="" align="left">xoops_module_install_xnpdata</td>
-
- </tr>
-
- </tbody>
-
- </table>
-
- </div>
-
- </div>
-
- <br class="table-break" />
+</div>
 
  <p>
 
- Dataタイプの場合は以下のように実装します．
+Dataタイプの場合は以下のように実装します．
 
- </p>
-
- <pre class="programlisting">
-
+```php
 function xoops_module_install_xnpdata( $xoopsMod ) {
+  global $xoopsDB;
 
- global $xoopsDB;
+  // register itemtype
+  $table = $xoopsDB->prefix( 'xoonips_item_type' );
+  $mid = $xoopsMod->getVar( 'mid' );
+  $sql = "INSERT INTO $table ( name, display_name, mid, viewphp ) VALUES ( 'xnpdata', 'Data', $mid, 'xnpdata/include/view.php' )";
+  if ( $xoopsDB->query( $sql ) == FALSE ) {
+    // cannot register itemtype
+    return false;
+  }
+  ....
+```
 
- // register itemtype
+</div>
 
- $table = $xoopsDB-&gt;prefix( 'xoonips_item_type' );
+<div class="section" lang="ja" xml:lang="ja">
 
- $mid = $xoopsMod-&gt;getVar( 'mid' );
+<div xmlns="" class="titlepage">
 
- $sql = "INSERT INTO $table ( name, display_name, mid, viewphp ) VALUES ( 'xnpdata', 'Data', $mid, 'xnpdata/include/view.php' )";
+<div>
 
- if ( $xoopsDB-&gt;query( $sql ) == FALSE ) {
+<div>
 
- // cannot register itemtype
+## <a id="module.update"></a>2\. アップデート処理
 
- return false;
+</div>
 
- }
+</div>
 
- ....
+</div>
 
- </pre>
+アイテムタイプモジュールを更新する処理を実装します．
 
- </div>
+モジュールアップデート時にコールバックされる以下の関数に処理を実装してください
 
- <div class="section" lang="ja" xml:lang="ja">
+<div class="table"><a id="table.module.update"></a>
 
- <div xmlns="" class="titlepage">
+**表 4.2\. アップデート処理コールバック関数**
 
- <div>
+<div class="table-contents">
 
- <div>
+<colgroup><col> <col> <col></colgroup> 
 
- <h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="module.update"></a>2. アップデート処理</h2>
+| 書式 | 例(xnpdataモジュールの場合) ||
+| :-- | :-- | :-- |
+| フォルダ | モジュールフォルダ/include/ | xnpdata/include/ |
+| ファイル名 | onupdate.inc.php | onupdate.inc.php |
+| 関数名 | xoops_module_update_アイテムタイプ名(小文字) | xoops_module_update_xnpdata |
 
- </div>
+</div>
 
- </div>
+</div>
 
- </div>
+Dataタイプの場合は以下のように実装します．アップデートに成功したらtrue，失敗したらfalseを返します．
 
- <p>アイテムタイプモジュールを更新する処理を実装します．</p>
-
- <p>モジュールアップデート時にコールバックされる以下の関数に処理を実装してください</p>
-
- <div class="table">
-
- <a id="table.module.update"></a>
-
- <p class="title">
-
- <b>表 4.2. アップデート処理コールバック関数</b>
-
- </p>
-
- <div class="table-contents">
-
- <table summary="アップデート処理コールバック関数" cellspacing="0" cellpadding="5" border="0" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
-
- <colgroup>
-
- <col />
-
- <col />
-
- <col />
-
- </colgroup>
-
- <thead>
-
- <tr>
-
- <th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left"> </th>
-
- <th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">書式</th>
-
- <th style="border-bottom: 0.5pt solid ; " align="left">例(xnpdataモジュールの場合)</th>
-
- </tr>
-
- </thead>
-
- <tbody>
-
- <tr>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">フォルダ</td>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">モジュールフォルダ/include/</td>
-
- <td style="border-bottom: 0.5pt solid ; " align="left">xnpdata/include/</td>
-
- </tr>
-
- <tr>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">ファイル名</td>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">onupdate.inc.php</td>
-
- <td style="border-bottom: 0.5pt solid ; " align="left">onupdate.inc.php</td>
-
- </tr>
-
- <tr>
-
- <td style="border-right: 0.5pt solid ; " align="left">関数名</td>
-
- <td style="border-right: 0.5pt solid ; " align="left">xoops_module_update_アイテムタイプ名(小文字)</td>
-
- <td style="" align="left">xoops_module_update_xnpdata</td>
-
- </tr>
-
- </tbody>
-
- </table>
-
- </div>
-
- </div>
-
- <br class="table-break" />
-
- <p>
-
- Dataタイプの場合は以下のように実装します．アップデートに成功したらtrue，失敗したらfalseを返します．
-
- </p>
-
- <pre class="programlisting">
-
+```php
 function xoops_module_update_xnpdata( $xoopsMod, $oldversion ) {
+  global $xoopsDB;
+  $table = $xoopsDB->prefix( 'xnpdata_item_detail' );
 
- global $xoopsDB;
-
- $table = $xoopsDB-&gt;prefix( 'xnpdata_item_detail' );
-
- echo '&lt;code&gt;Updating modules...&lt;/code&gt;&lt;br /&gt;';
-
- switch ( $oldversion ) {
-
- case 200:
-
- //Ver. 2.00から3.10までの更新処理
-
- ....
-
- case 310:
-
- //Ver. 3.10から3.11までの更新処理
-
- ....
-
- case 311:
-
- //Ver. 3.11から最新版までの更新処理
-
- ....
-
- if ( $is_error ) {
-
- echo $xoopsDB-&gt;error();
-
- return false;
-
- }
-
- default:
-
- return true;
-
- }
-
+  echo '<code>Updating modules...</code><br />';
+  switch ( $oldversion ) {
+  case 200:
+    //Ver. 2.00から3.10までの更新処理
+    ....
+  case 310:
+    //Ver. 3.10から3.11までの更新処理
+    ....
+  case 311:
+    //Ver. 3.11から最新版までの更新処理
+    ....
+    if ( $is_error ) {
+      echo $xoopsDB->error();
+      return false;
+    }
+  default:
+    return true;
+  }
 }
+```
 
- </pre>
+</div>
 
- </div>
+<div class="section" lang="ja" xml:lang="ja">
 
- <div class="section" lang="ja" xml:lang="ja">
+<div xmlns="" class="titlepage">
 
- <div xmlns="" class="titlepage">
+<div>
 
- <div>
+<div>
 
- <div>
+## <a id="module.uninstall"></a>3\. アンインストール処理
 
- <h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="module.uninstall"></a>3. アンインストール処理</h2>
+</div>
 
- </div>
+</div>
 
- </div>
+</div>
 
- </div>
+インストール時にアイテムタイプテーブルに書き込んだ情報を，アイテムタイプのアンインストール時に削除する必要があります．また，作成されたアイテムの情報もモジュールの削除と同時にデータベースから削除する必要があります．
 
- <p>インストール時にアイテムタイプテーブルに書き込んだ情報を，アイテムタイプのアンインストール時に削除する必要があります．また，作成されたアイテムの情報もモジュールの削除と同時にデータベースから削除する必要があります．</p>
+モジュールアンインストール時にコールバックされる以下の関数に処理を実装してください
 
- <p>モジュールアンインストール時にコールバックされる以下の関数に処理を実装してください</p>
+<div class="table"><a id="table.module.uninstall"></a>
 
- <div class="table">
+**表 4.3\. アンインストール処理コールバック関数**
 
- <a id="table.module.uninstall"></a>
+<div class="table-contents">
 
- <p class="title">
+<colgroup><col> <col> <col></colgroup> 
 
- <b>表 4.3. アンインストール処理コールバック関数</b>
+| 書式 | 例(xnpdataモジュールの場合) ||
+| :-- | :-- | :-- |
+| フォルダ | モジュールフォルダ/include/ | xnpdata/include/ |
+| ファイル名 | onuninstall.inc.php | onuninstall.inc.php |
+| 関数名 | xoops_module_uninstall_アイテムタイプ名(小文字) | xoops_module_uninstall_xnpdata |
 
- </p>
+</div>
 
- <div class="table-contents">
+</div>
 
- <table summary="アンインストール処理コールバック関数" cellspacing="0" cellpadding="5" border="0" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+Dataタイプの場合は以下のように実装します．
 
- <colgroup>
-
- <col />
-
- <col />
-
- <col />
-
- </colgroup>
-
- <thead>
-
- <tr>
-
- <th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left"> </th>
-
- <th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">書式</th>
-
- <th style="border-bottom: 0.5pt solid ; " align="left">例(xnpdataモジュールの場合)</th>
-
- </tr>
-
- </thead>
-
- <tbody>
-
- <tr>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">フォルダ</td>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">モジュールフォルダ/include/</td>
-
- <td style="border-bottom: 0.5pt solid ; " align="left">xnpdata/include/</td>
-
- </tr>
-
- <tr>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">ファイル名</td>
-
- <td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left">onuninstall.inc.php</td>
-
- <td style="border-bottom: 0.5pt solid ; " align="left">onuninstall.inc.php</td>
-
- </tr>
-
- <tr>
-
- <td style="border-right: 0.5pt solid ; " align="left">関数名</td>
-
- <td style="border-right: 0.5pt solid ; " align="left">xoops_module_uninstall_アイテムタイプ名(小文字)</td>
-
- <td style="" align="left">xoops_module_uninstall_xnpdata</td>
-
- </tr>
-
- </tbody>
-
- </table>
-
- </div>
-
- </div>
-
- <br class="table-break" />
-
- <p>
-
- Dataタイプの場合は以下のように実装します．
-
- </p>
-
- <pre class="programlisting">
-
+```php
 function xoops_module_uninstall_xnpdata( $xoopsMod ) {
+	global $xoopsDB;
 
- global $xoopsDB;
+    ....
+	// unregister itemtype
+	$table = $xoopsDB->prefix('xoonips_item_type');
+	$mid = $xoopsMod->getVar('mid');
+	$sql = "DELETE FROM $table where mid = $mid";
+	if ( $xoopsDB->query($sql) == FALSE ){
+		// cannot unregister itemtype
+		return false;
+	}
+    ....
 
+```
 
+</div>
 
- ....
-
- // unregister itemtype
-
- $table = $xoopsDB-&gt;prefix('xoonips_item_type');
-
- $mid = $xoopsMod-&gt;getVar('mid');
-
- $sql = "DELETE FROM $table where mid = $mid";
-
- if ( $xoopsDB-&gt;query($sql) == FALSE ){
-
- // cannot unregister itemtype
-
- return false;
-
- }
-
- ....
-
- </pre>
-
- </div>
-
- </div>
-
- <div xmlns="http://www.w3.org/1999/xhtml" class="navfooter">
-
-
-
- </div>
-
- </div>
-
- </body>
-
-
-
+</div>
 

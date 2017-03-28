@@ -249,35 +249,20 @@
  <pre class="programlisting">例: xnppaperの場合
 
 select xoops_xoonips_item_basic.item_id
-
 from xoops_xoonips_item_basic
-
 left join xoops_xoonips_index_item_link on ...
-
 left join xoops_xoonips_index on ...
-
 left join xoops_xoonips_groups_users_link on ...
-
 left join xoops_users on ...
-
 left join xoops_xoonips_file on ...
-
 left join xoops_xoonips_item_title on ...
-
 left join xoops_xoonips_item_keyword on ...
-
 left join xoops_xnppaper_item_detail on ...
-
 <span class="underline">left join (テーブル名) on (条件)</span> ← $join
-
 where
-
  xoops_xnppaper_item_detail.paper_id is not null and
-
  ( <span class="underline">xoops_xoonips_item_basic.title like '%foo%' and ...</span> ) ← $where
-
  and ...
-
 group by xoops_xoonips_item_basic.item_id;</pre>
 
  </blockquote>
