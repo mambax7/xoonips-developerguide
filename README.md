@@ -8,11 +8,11 @@ Module Version 3.45
 
 Tutorial Version 3.40
       
-![logoModule.png](en/en/assets/logoModule.png)
+![logoModule.png](/en/assets/logoModule.png)
             
 ## Developer Guide
 
-© 2016 XOOPS Project ([www.xoops.org](http://xoops.org)),   [XooNIps](http://xoonips.osdn.jp/), [Riken](http://www.riken.jp/)   
+(c) 2017 XOOPS Project ([www.xoops.org](http://xoops.org)),   [XooNIps](http://xoonips.osdn.jp/), [Riken](http://www.riken.jp/)   
 
 ## Tutorial Purpose 
 
