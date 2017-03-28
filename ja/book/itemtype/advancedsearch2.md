@@ -57,6 +57,9 @@
 <div class="figure-contents">
 
 <div class="mediaobject">![画面遷移と送信パラメータ](images\search-trans.gif)</div>
+<img src="../../assets/itemtype/search-trans.gif" alt="画面遷移と送信パラメータ" />
+
+
 
 </div>
 
