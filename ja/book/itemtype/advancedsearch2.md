@@ -45,6 +45,9 @@
 <div class="figure-contents">
 
 <div class="mediaobject">![詳細検索の流れ](images\search-flow.gif)</div>
+<img src="../../assets/itemtype/search-flow.gif" alt="詳細検索の流れ" />
+
+
 
 </div>
 
